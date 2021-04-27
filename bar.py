@@ -26,6 +26,8 @@ bar_sep = " | "
 bar_string = ""
 
 for module in all_module:
-    bar_string += bar_sep + import_module(module).get_module_text() + bar_sep
+    module_text = import_module(module).get_module_text()
+    if module_text:
+        bar_string += bar_sep + module_text + bar_sep
 
 print(bar_string)
