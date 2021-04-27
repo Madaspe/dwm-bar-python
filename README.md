@@ -1,0 +1,4 @@
+# DWM Python bar
+
+# TODO
+
