@@ -1,6 +1,8 @@
 import os
 import importlib
 
+import config
+
 
 def get_modules(path_to_modules):
     all_module = os.listdir(path_to_modules)
@@ -20,12 +22,16 @@ def import_module(name):
 
 module_path = 'modules'
 all_module = get_modules(module_path)
+modules_avalible = [module_avalible.split('.')[-1] for module_avalible in all_module]
 imported_modules = []
 
 bar_sep = " | "
 bar_string = ""
 
-for module in all_module:
+for module in config.modules_use:
+    if module in modules_avalible:
+        module = f"{'.'.join(all_module[-1].split('.')[:-1])}.{module}"
+
     module_text = import_module(module).get_module_text()
     if module_text:
         bar_string += bar_sep + module_text + bar_sep
