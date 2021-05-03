@@ -1,1 +1,1 @@
-modules_use = ["cpu", "date", "memory"]
+modules_use = ["date", "memory"]
