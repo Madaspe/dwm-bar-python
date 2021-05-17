@@ -5,5 +5,6 @@ Simple module python dwm bar
 # Install
 `git clone https://github.com/Madaspe/dwm-bar-python` <br>
 `python3 -m pip install -r requirements.txt --user` <br>
-Add `sh /path/to/bar.sh &` in your `xinitrc`
+`chmod +x ./path/to/bar.sh` <br>
+Add `./path/to/bar.sh &` in your `xinitrc`
 
